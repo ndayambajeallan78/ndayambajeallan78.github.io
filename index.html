@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Allan Ndayambaje — computing student, aspiring software developer and technology enthusiast.">
+  <meta name="theme-color" content="#081426">
+  <title>Allan Ndayambaje | Developer & Technology Enthusiast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+/* Allan Ndayambaje portfolio — responsive, accessible styling */
+:root{--bg:#081426;--bg2:#0b1b31;--panel:#10233c;--panel2:#122943;--text:#edf5ff;--muted:#a7b7cb;--blue:#54a9ff;--cyan:#50e3d2;--line:rgba(171,201,232,.14);--font:'DM Sans',sans-serif;--display:'Space Grotesk',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));z-index:2000}
+.site-header{height:82px;padding:0 8%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1000;background:rgba(8,20,38,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;font:700 14px var(--display);letter-spacing:1.2px}.brand-mark{width:39px;height:39px;border-radius:12px;background:linear-gradient(135deg,#236fbd,#42d6ce);display:grid;place-items:center;font:700 22px var(--display);color:#061426}.brand-mark span,.cta-decoration span{color:#fff}.brand-muted{display:block;font:500 9px var(--font);letter-spacing:3px;color:var(--muted);margin-top:1px}.nav{display:flex;align-items:center;gap:30px}.nav-link{font-size:13px;font-weight:600;color:var(--muted);transition:.25s}.nav-link:hover,.nav-link.active{color:var(--text)}.nav-contact{padding:10px 16px;border:1px solid rgba(84,169,255,.45);border-radius:8px;color:var(--text)}.nav-contact i{font-size:10px;margin-left:5px;color:var(--cyan)}.menu-toggle{display:none;background:none;border:0;color:white;font-size:23px}
+.section-shell{padding-left:10%;padding-right:10%}.hero{min-height:calc(100vh - 82px);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px;position:relative;padding-top:70px;padding-bottom:110px;background:radial-gradient(ellipse at 78% 46%,rgba(31,100,164,.15),transparent 40%)}.eyebrow,.section-kicker{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--cyan)}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid var(--line);border-radius:30px;background:rgba(16,35,60,.6)}.status-dot{height:7px;width:7px;background:#50dfaa;border-radius:50%;box-shadow:0 0 12px #50dfaa;display:inline-block}.hello{color:var(--muted);font-size:19px;margin-top:30px}.hero h1{font:700 clamp(48px,6vw,78px)/1.08 var(--display);letter-spacing:-3px;margin:7px 0 15px}.gradient-text{background:linear-gradient(100deg,#69b8ff,#55e2d0);-webkit-background-clip:text;background-clip:text;color:transparent}.hero h2{font:500 clamp(17px,2vw,22px) var(--display);color:#dce9f8}.divider-word{color:var(--cyan);padding:0 5px}.hero-description{max-width:570px;color:var(--muted);font-size:16px;margin:22px 0 29px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:13px 19px;border-radius:8px;font-size:13px;font-weight:700;transition:transform .25s,box-shadow .25s,border-color .25s;cursor:pointer}.button:hover{transform:translateY(-3px)}.button-primary{background:linear-gradient(110deg,#328ee7,#36c8c1);color:#061426;box-shadow:0 9px 30px rgba(46,157,215,.2);border:0}.button-primary:hover{box-shadow:0 12px 35px rgba(46,157,215,.35)}.button-ghost{border:1px solid var(--line);color:var(--text)}.button-ghost:hover{border-color:var(--blue)}.hero-socials{display:flex;align-items:center;gap:19px;margin-top:38px}.hero-socials span{font-size:10px;letter-spacing:1.8px;color:#8296ae;font-weight:700}.hero-socials a,.footer-socials a{color:#9eb3ca;font-size:17px;transition:.2s}.hero-socials a:hover,.footer-socials a:hover{color:var(--cyan);transform:translateY(-2px)}
+.hero-visual{min-height:410px;position:relative;display:grid;place-items:center}.visual-glow{position:absolute;width:330px;height:330px;background:rgba(49,149,219,.15);filter:blur(75px);border-radius:50%}.code-window{position:relative;z-index:2;width:min(100%,440px);border:1px solid rgba(118,178,224,.25);border-radius:15px;background:rgba(10,27,48,.94);box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden;transform:rotate(2deg)}.window-top{height:47px;background:#122842;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 17px;gap:13px;color:#8097b1;font-size:11px}.window-top>i{margin-left:auto}.window-dots{display:flex;gap:5px}.window-dots i{width:7px;height:7px;border-radius:50%;background:#ff6f75}.window-dots i:nth-child(2){background:#f7c45b}.window-dots i:nth-child(3){background:#50d9a1}.code-content{padding:26px 28px 30px;font:13px/2.1 monospace;color:#d7e5f5}.indent{padding-left:22px}.indent2{padding-left:45px}.code-purple{color:#d49cff}.code-blue{color:#82baff}.code-cyan{color:#5fe0dc}.code-green{color:#a5e7b6}.code-comment{color:#7189a5;margin-top:10px}.cursor{color:var(--cyan);animation:blink 1s steps(2,start) infinite}@keyframes blink{to{visibility:hidden}}.floating-chip{position:absolute;z-index:3;display:flex;align-items:center;gap:9px;padding:11px 14px;background:#142d49;border:1px solid rgba(104,181,231,.22);border-radius:9px;box-shadow:0 12px 30px #020b16;color:#d9eafa;font-size:11px;font-weight:600}.floating-chip i{color:var(--cyan)}.chip-one{top:54px;right:-15px}.chip-two{bottom:49px;left:-20px}.hero-orbit{position:absolute;border:1px solid rgba(91,173,229,.15);border-radius:50%;width:390px;height:390px}.orbit-two{width:470px;height:470px;border-style:dashed;opacity:.5}.scroll-cue{position:absolute;bottom:30px;left:10%;font-size:9px;letter-spacing:2px;color:#7f94ad;display:flex;align-items:center;gap:12px}.scroll-cue span{width:30px;height:1px;background:var(--cyan)}
+.section{padding:105px 10%;position:relative}.section-heading{max-width:720px;margin-bottom:48px}.section-kicker{margin-bottom:13px}.section-heading h2,.cta-panel h2{font:700 clamp(32px,4vw,46px)/1.2 var(--display);letter-spacing:-1.5px}.section-intro{color:var(--muted);margin-top:15px;max-width:620px;font-size:15px}.section-about{background:#0a192c}.about-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:65px;align-items:center}.about-card{min-height:390px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,#132e4b,#0d1d32);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}.profile-art{height:290px;width:290px;display:grid;place-items:center;position:relative}.profile-initials{height:190px;width:190px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#236db1,#42cfc3);font:700 72px var(--display);color:#07172a;box-shadow:0 0 70px rgba(66,207,195,.15);z-index:1}.profile-ring{position:absolute;width:260px;height:260px;border:1px dashed rgba(109,192,235,.45);border-radius:50%;animation:spin 35s linear infinite}.profile-spark{position:absolute;color:var(--cyan);font-size:27px}.spark-a{top:25px;right:25px}.spark-b{bottom:25px;left:25px}@keyframes spin{to{transform:rotate(360deg)}}.profile-caption{position:absolute;bottom:24px;color:#b8c9da;font-size:12px;display:flex;gap:9px;align-items:center}.about-copy h3,.contact-copy h3{font:600 24px var(--display);margin-bottom:17px}.about-copy p,.contact-copy>p{color:var(--muted);font-size:14px;margin-bottom:14px}.about-facts{display:grid;grid-template-columns:1fr 1fr;gap:19px;margin:28px 0}.about-facts>div{display:flex;align-items:center;gap:12px}.fact-icon{width:38px;height:38px;border-radius:9px;background:#173552;display:grid;place-items:center;color:var(--cyan)}.about-facts b,.about-facts small{display:block}.about-facts b{font-size:12px}.about-facts small{font-size:10px;color:var(--muted)}.text-link{color:var(--cyan);font-size:13px;font-weight:700}.text-link i{font-size:10px;margin-left:5px}
+.section-skills{background:var(--bg)}.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.skill-card{background:linear-gradient(145deg,#10243d,#0c1c30);border:1px solid var(--line);padding:25px;border-radius:13px;transition:.25s}.skill-card:hover,.project-card:hover{transform:translateY(-5px);border-color:rgba(80,227,210,.35)}.skill-icon{height:43px;width:43px;border-radius:11px;background:rgba(75,172,225,.12);display:grid;place-items:center;color:var(--cyan);font-size:18px;margin-bottom:19px}.skill-card h3,.project-info h3,.timeline-content h3{font:600 18px var(--display);margin-bottom:9px}.skill-card p,.project-info p,.timeline-content p{font-size:12px;color:var(--muted);line-height:1.8}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.tags span{font-size:10px;color:#b8d8f2;background:rgba(81,161,218,.1);border:1px solid rgba(81,161,218,.15);padding:5px 9px;border-radius:5px}.skills-note{font-size:11px;color:#8fa4ba;margin-top:23px}.skills-note i{color:var(--cyan);margin-right:6px}
+.timeline{max-width:850px;margin-left:10px;border-left:1px solid rgba(84,169,255,.3);padding-left:35px}.timeline-item{position:relative;padding-bottom:37px}.timeline-marker{position:absolute;left:-42px;top:5px;width:13px;height:13px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 6px rgba(80,227,210,.1)}.timeline-content{padding:23px 26px;border:1px solid var(--line);border-radius:12px;background:#0d1e33}.timeline-meta{display:flex;justify-content:space-between;gap:15px;color:var(--cyan);font-size:9px;letter-spacing:1.2px;font-weight:700;margin-bottom:12px}.timeline-meta span+span{color:#849bb3;text-align:right}.timeline-content h3{font-size:19px}.timeline-content p{font-size:13px;max-width:720px}
+.section-projects{background:#0a192c}.projects-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}.project-card{background:#10233b;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.25s}.project-art{height:220px;display:grid;place-items:center;position:relative;overflow:hidden}.rental-art{background:radial-gradient(circle at 50% 50%,#1d5980,#10233b 70%)}.tech-art{background:radial-gradient(circle at 50% 50%,#254b66,#10233b 70%)}.project-number{position:absolute;right:18px;top:14px;font:600 12px var(--display);color:#b5cce0}.mini-dashboard{width:66%;height:145px;border-radius:8px;background:#eaf3fa;box-shadow:0 15px 40px #07111d66;overflow:hidden;transform:rotate(-3deg)}.mini-top{height:19px;background:#d6e3ed;display:flex;gap:4px;align-items:center;padding-left:9px}.mini-top span{width:5px;height:5px;border-radius:50%;background:#6ca7c8}.mini-body{display:flex;height:126px}.mini-sidebar{width:22%;background:#183c5a}.mini-main{flex:1;padding:12px}.mini-heading{height:8px;width:50%;background:#8baec6;border-radius:5px}.mini-stats{display:flex;gap:7px;margin:12px 0}.mini-stats i{height:23px;flex:1;background:#c3d8e6;border-radius:3px}.mini-chart{height:42px;background:linear-gradient(160deg,transparent 40%,#5fc8bd 41%,#5fc8bd 44%,transparent 45%),#d9e8ef;border-radius:3px}.tech-symbol{height:125px;width:125px;border:1px solid rgba(92,205,215,.5);border-radius:30px;display:grid;place-items:center;color:var(--cyan);font:700 35px var(--display);transform:rotate(-8deg);background:rgba(7,22,39,.3)}.tech-symbol i{font-size:30px;margin-bottom:-25px}.project-info{padding:24px}.project-label{font-size:9px;color:var(--cyan);letter-spacing:1.1px;font-weight:700;margin-bottom:9px}.project-info h3{font-size:22px}.project-info p{font-size:12px}.project-status{display:inline-flex;align-items:center;gap:7px;color:#9cb4ca;font-size:10px;margin-top:18px}.project-status i{font-size:7px;color:#e8bd6a}.project-disclaimer{font-size:11px;color:#91a7bd;margin-top:22px}.project-disclaimer i{color:var(--cyan);margin-right:6px}
+.section-cta{padding-top:75px;padding-bottom:75px}.cta-panel{position:relative;overflow:hidden;border:1px solid rgba(85,187,221,.24);border-radius:17px;padding:43px 48px;background:linear-gradient(110deg,#12375a,#10334a 65%,#12404b);display:flex;align-items:center;justify-content:space-between;gap:30px}.cta-panel>div:first-child{max-width:610px;z-index:1}.cta-panel h2{font-size:34px}.cta-panel p:not(.section-kicker){color:#b2c8d9;font-size:13px;margin-top:13px}.cta-panel .button{white-space:nowrap;z-index:1}.cta-decoration{position:absolute;right:25%;font:700 180px var(--display);color:rgba(119,202,223,.06)}
+.section-contact{background:#0a192c}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px}.contact-copy>p{margin-bottom:28px}.contact-method{display:flex;align-items:center;gap:14px;margin:19px 0}.contact-method>span{height:43px;width:43px;border-radius:10px;background:#163451;color:var(--cyan);display:grid;place-items:center;font-size:17px}.contact-method small,.contact-method b{display:block}.contact-method small{font-size:9px;color:#7f98b1;letter-spacing:1.3px}.contact-method b{font-size:12px;font-weight:600}.contact-form{padding:28px;border:1px solid var(--line);border-radius:13px;background:#10233b}.form-row{margin-bottom:16px}.form-row label{display:block;font-size:11px;color:#c4d5e6;font-weight:600;margin-bottom:7px}.form-row input,.form-row textarea{width:100%;padding:12px 13px;border:1px solid rgba(157,189,219,.17);border-radius:7px;background:#0a1a2e;color:var(--text);outline:none;font-size:12px;resize:vertical}.form-row input:focus,.form-row textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(84,169,255,.08)}.form-row input::placeholder,.form-row textarea::placeholder{color:#657f99}.submit-button{width:100%}.form-hint{font-size:10px;color:#8299b0;margin-top:12px}.footer{padding:38px 10% 20px;background:#06101e;border-top:1px solid var(--line);text-align:center}.footer>.brand{justify-content:center}.footer>p{font-size:11px;color:#8499af;margin:15px 0}.footer-socials{display:flex;justify-content:center;gap:19px;margin-bottom:25px}.footer-bottom{border-top:1px solid var(--line);padding-top:17px;display:flex;justify-content:space-between;color:#71869d;font-size:10px}.footer-bottom a{color:#9bb4cc}.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:1000px){.site-header{padding:0 5%}.section-shell,.section{padding-left:7%;padding-right:7%}.hero{gap:25px}.hero h1{font-size:59px}.nav{gap:18px}.about-grid,.contact-grid{gap:35px}.skills-grid{grid-template-columns:repeat(2,1fr)}.scroll-cue{left:7%}}
+@media(max-width:760px){.site-header{height:72px}.menu-toggle{display:block}.nav{display:none;position:absolute;top:71px;left:0;right:0;padding:18px 7% 24px;background:#0b1b30;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav-link{padding:12px 0;border-bottom:1px solid var(--line)}.nav-contact{margin-top:12px;text-align:center;border:1px solid rgba(84,169,255,.45)}.hero{grid-template-columns:1fr;padding-top:65px;padding-bottom:105px}.hero-copy{max-width:650px}.hero-visual{min-height:350px;margin-top:15px}.code-window{max-width:410px}.chip-one{right:0}.chip-two{left:0}.hero h1{font-size:clamp(48px,11vw,68px)}.about-grid,.contact-grid{grid-template-columns:1fr}.about-card{min-height:330px}.profile-art{transform:scale(.85)}.about-copy{padding-top:8px}.projects-grid{grid-template-columns:1fr}.project-art{height:205px}.cta-panel{align-items:flex-start;flex-direction:column;padding:32px}.section{padding-top:78px;padding-bottom:78px}.scroll-cue{bottom:26px}}
+@media(max-width:520px){.section-shell,.section{padding-left:6%;padding-right:6%}.hero h1{letter-spacing:-2px}.hero-description{font-size:14px}.hero-visual{min-height:300px}.code-content{padding:19px 17px;font-size:10px}.code-window{width:94%}.hero-orbit{width:300px;height:300px}.orbit-two{width:350px;height:350px}.floating-chip{font-size:9px;padding:8px 10px}.chip-one{top:25px}.chip-two{bottom:20px}.skills-grid{grid-template-columns:1fr}.section-heading h2{font-size:33px}.about-facts{grid-template-columns:1fr}.timeline{padding-left:25px}.timeline-marker{left:-32px}.timeline-content{padding:19px}.timeline-meta{flex-direction:column;gap:4px}.timeline-meta span+span{text-align:left}.cta-panel h2{font-size:29px}.contact-form{padding:20px}.footer-bottom{gap:12px;flex-direction:column;align-items:center}.hero-socials{gap:15px}.hero-socials span{font-size:9px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+/* Enhanced colour treatment: visible section backgrounds, gradients and depth */
+body{background:#071426}
+.hero{background:radial-gradient(ellipse at 78% 42%,rgba(30,144,220,.30),transparent 43%),radial-gradient(ellipse at 12% 85%,rgba(20,184,166,.16),transparent 38%),linear-gradient(135deg,#08172d 0%,#102b4b 52%,#09243a 100%)}
+.site-header{background:rgba(5,16,32,.94);box-shadow:0 8px 30px rgba(0,0,0,.16)}
+.section-about{background:linear-gradient(135deg,#0c2039 0%,#123454 52%,#0b2537 100%)}
+.section-skills{background:linear-gradient(135deg,#071426 0%,#102a45 50%,#081b31 100%)}
+.section-experience{background:linear-gradient(135deg,#102b45,#0a1b30)}
+.section-projects{background:radial-gradient(ellipse at 18% 20%,rgba(32,120,171,.24),transparent 38%),linear-gradient(135deg,#0a1b31,#102e49 55%,#091a2d)}
+.section-cta{background:linear-gradient(135deg,#071426,#102b45)}
+.section-contact{background:radial-gradient(ellipse at 85% 30%,rgba(35,143,165,.18),transparent 38%),linear-gradient(135deg,#0b1c32,#102d47)}
+.skill-card{background:linear-gradient(145deg,rgba(27,64,98,.96),rgba(12,31,53,.98));box-shadow:0 12px 32px rgba(0,0,0,.15)}
+.timeline-content{background:linear-gradient(135deg,#153653,#0d2036);box-shadow:0 12px 30px rgba(0,0,0,.13)}
+.project-card{background:linear-gradient(145deg,#173956,#0c2036);box-shadow:0 15px 38px rgba(0,0,0,.2)}
+.about-card{background:radial-gradient(circle at 50% 35%,rgba(49,171,190,.28),transparent 48%),linear-gradient(145deg,#174467,#0b2037)}
+.contact-form{background:linear-gradient(145deg,#173956,#0c2036);box-shadow:0 15px 38px rgba(0,0,0,.2)}
+.cta-panel{background:radial-gradient(circle at 90% 20%,rgba(80,227,210,.2),transparent 35%),linear-gradient(110deg,#14518a,#116078 65%,#126c70);box-shadow:0 18px 45px rgba(0,0,0,.2)}
+.footer{background:linear-gradient(135deg,#040c18,#081a2c)}
+.button-primary{background:linear-gradient(110deg,#48a5ff,#48e0c8);box-shadow:0 10px 28px rgba(54,174,219,.28)}
+.nav-contact:hover,.button-ghost:hover{background:rgba(80,170,230,.12)}
+/* Keep all content readable even if JavaScript is disabled or fails to load. */
+.reveal{opacity:1;transform:none}
+body.js-ready .reveal{opacity:0;transform:translateY(22px)}
+body.js-ready .reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:760px){.hero{background:radial-gradient(ellipse at 50% 35%,rgba(30,144,220,.28),transparent 52%),linear-gradient(145deg,#08172d,#102b4b 65%,#09243a)}}
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Allan home"><span class="brand-mark"><img src="C:\Users\jacks\OneDrive\Old\Pictures\IMG-20251001-WA0004.jpg" width="50" height="50" alt=""><span>.</span></span><span>ALLAN<span class="brand-muted">NDAYAMBAJE</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <nav class="nav" id="nav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link nav-contact">Let's talk <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> OPEN TO LEARNING & OPPORTUNITIES</div>
+        <p class="hello">Hello, I'm</p>
+        <h1>Allan <span class="gradient-text">Ndayambaje.</span></h1>
+        <h2>Computing Student <span class="divider-word">/</span> Aspiring Software Developer</h2>
+        <p class="hero-description">I enjoy turning ideas into useful digital experiences. I explore web development, software solutions, networking and technology that solves real-world problems.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="button button-ghost" href="#contact">Contact me</a>
+        </div>
+        <div class="hero-socials">
+          <span>CONNECT</span>
+          <a href="https://github.com/ndayambajeallan78 (ndayambajeallan78)" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/0789443852" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="visual-glow"></div>
+        <div class="code-window">
+          <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>allans-profile.js</span><i class="fa-solid fa-code"></i></div>
+          <div class="code-content">
+            <p><span class="code-purple">const</span> <span class="code-blue">developer</span> = {</p>
+            <p class="indent"><span class="code-cyan">name</span>: <span class="code-green">'Allan Ndayambaje'</span>,</p>
+            <p class="indent"><span class="code-cyan">focus</span>: [</p>
+            <p class="indent2"><span class="code-green">'Web development'</span>,</p>
+            <p class="indent2"><span class="code-green">'Software solutions'</span>,</p>
+            <p class="indent2"><span class="code-green">'Networking'</span></p>
+            <p class="indent">],</p>
+            <p class="indent"><span class="code-cyan">mindset</span>: <span class="code-green">'Always learning'</span>,</p>
+            <p class="indent"><span class="code-cyan">location</span>: <span class="code-green">'Uganda'</span></p>
+            <p>};</p>
+            <p class="code-comment">// Building, learning, improving.</p>
+            <p><span class="code-purple">developer</span>.<span class="code-blue">create</span>(); <span class="cursor">|</span></p>
+          </div>
+        </div>
+        <div class="floating-chip chip-one"><i class="fa-solid fa-laptop-code"></i><span>Build with purpose</span></div>
+        <div class="floating-chip chip-two"><i class="fa-solid fa-lightbulb"></i><span>Curious by nature</span></div>
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      </div>
+      <a href="#about" class="scroll-cue"><span></span> SCROLL TO DISCOVER</a>
+    </section>
+
+    <section class="section section-about" id="about">
+      <div class="section-heading reveal"><p class="section-kicker">01 / ABOUT ME</p><h2>A little about <span class="gradient-text">who I am.</span></h2><p class="section-intro">Technology is more than code to me — it is a way to solve problems, share ideas and create opportunities.</p></div>
+      <div class="about-grid">
+        <div class="about-card profile-card reveal">
+          <div class="profile-art"><div class="profile-initials"><img src="C:\Users\jacks\OneDrive\Old\Pictures\IMG-20251001-WA0004.jpg" width="130" height="130" alt=""></div><span class="profile-ring"></span><span class="profile-spark spark-a">✳</span><span class="profile-spark spark-b">+</span></div>
+          <div class="profile-caption"><span class="status-dot"></span> Based in Uganda</div>
+        </div>
+        <div class="about-copy reveal">
+          <h3>Learning today. Building for tomorrow.</h3>
+          <p>I'm Allan Ndayambaje, a computing student with a strong interest in software development and practical ICT solutions. I enjoy learning how technology works and applying that knowledge to projects that address everyday needs.</p>
+          <p>My learning and practical experience have exposed me to website development, databases, computer maintenance, networking, graphics design and introductory machine learning. I value teamwork, continuous learning and creating solutions that are simple for people to use.</p>
+          <div class="about-facts">
+            <div><span class="fact-icon"><i class="fa-solid fa-graduation-cap"></i></span><span><b>Education</b><small>Currently pursuing diploma studies in Computer Science</small></span></div>
+            <div><span class="fact-icon"><i class="fa-solid fa-location-dot"></i></span><span><b>Location</b><small>Kisoro,Uganda</small></span></div>
+            <div><span class="fact-icon"><i class="fa-solid fa-code"></i></span><span><b>Interests</b><small>Development & ICT solutions</small></span></div>
+          </div>
+          <a class="text-link" href="#contact">Let's connect <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-skills" id="skills">
+      <div class="section-heading reveal"><p class="section-kicker">02 / WHAT I WORK WITH</p><h2>Tools, technologies <span class="gradient-text">& interests.</span></h2><p class="section-intro">A growing toolkit built through coursework, hands-on practice and personal projects.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card reveal"><div class="skill-icon"><i class="fa-solid fa-code"></i></div><h3>Web Development</h3><p>Building and styling responsive web pages and learning full-stack development.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span></div></article>
+        <article class="skill-card reveal"><div class="skill-icon"><i class="fa-solid fa-database"></i></div><h3>Databases</h3><p>Designing data structures, writing queries and connecting applications to databases.</p><div class="tags"><span>MySQL</span><span>SQL</span><span>Database design</span></div></article>
+        <article class="skill-card reveal"><div class="skill-icon"><i class="fa-solid fa-laptop-code"></i></div><h3>Software Development</h3><p>Exploring application development, programming logic and practical software solutions.</p><div class="tags"><span>Python</span><span>JavaScript</span><span>Django (learning)</span></div></article>
+        <article class="skill-card reveal"><div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div><h3>Networking & IT Support</h3><p>Learning network configuration, troubleshooting and computer maintenance.</p><div class="tags"><span>IP addressing</span><span>LAN</span><span>PC maintenance</span></div></article>
+        <article class="skill-card reveal"><div class="skill-icon"><i class="fa-solid fa-palette"></i></div><h3>Creative Design</h3><p>Creating visual materials and exploring design tools for digital communication.</p><div class="tags"><span>Graphics design</span><span>UI concepts</span><span>Blender (learning)</span></div></article>
+        <article class="skill-card reveal"><div class="skill-icon"><i class="fa-solid fa-code-branch"></i></div><h3>Tools & Workflow</h3><p>Using development tools to organise projects, write code and improve workflow.</p><div class="tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>XAMPP</span></div></article>
+      </div>
+      <p class="skills-note"><i class="fa-solid fa-circle-info"></i> These are areas I have practised or am actively learning; my experience continues to grow.</p>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-heading reveal"><p class="section-kicker">03 / EXPERIENCE & LEARNING</p><h2>Growing through <span class="gradient-text">practice.</span></h2><p class="section-intro">A combination of academic learning, practical exposure and independent projects.</p></div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-meta"><span>INTERNSHIP / PRACTICAL TRAINING</span><span>AiCOD Solutions Limited</span></div><h3>ICT & Software Development Trainee</h3><p>Gained practical exposure to website design, mobile application development, computer maintenance, networking, software development, graphics design and machine learning.</p><div class="tags"><span>Website design</span><span>Computer maintenance</span><span>Networking</span><span>Machine learning</span></div></div></article>
+        <article class="timeline-item reveal"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-meta"><span>EDUCATION</span><span>Ongoing</span></div><h3>Diploma Studies</h3><p>Developing a foundation in computing concepts and practical ICT skills through academic work, assignments and hands-on learning.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-meta"><span>CONTINUOUS LEARNING</span><span>Ongoing</span></div><h3>Independent Projects & Technical Practice</h3><p>Applying classroom knowledge through website projects, database exercises, programming practice and exploration of emerging technologies.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section section-projects" id="projects">
+      <div class="section-heading reveal"><p class="section-kicker">04 / SELECTED WORK</p><h2>Ideas becoming <span class="gradient-text">real projects.</span></h2><p class="section-intro">A selection of projects and concepts that reflect what I am learning and building.</p></div>
+      <div class="projects-grid">
+        <article class="project-card project-feature reveal"><div class="project-art rental-art"><div class="mini-dashboard"><div class="mini-top"><span></span><span></span><span></span></div><div class="mini-body"><div class="mini-sidebar"></div><div class="mini-main"><div class="mini-heading"></div><div class="mini-stats"><i style="color: rgb(11, 156, 240);">Add</i><i style="color: rgb(11, 156, 240)">Pay</i><i style="color: rgb(11, 156, 240);">Manage</i></div><div class="mini-chart"><i style="color: #097a66;">Manage your rentals</i></div></div></div></div><span class="project-number">01</span></div><div class="project-info"><div class="project-label">SMART RENTAL TECHNOLOGY · CONCEPT / DEVELOPMENT</div><h3>LanTen Smart</h3><p>An AI-based smart rental management system concept focused on helping landlords and tenants manage rental information, payments, reminders and property records. The idea also explores rental analytics and rent forecasting.</p><div class="tags"><span>HTML/CSS/JS</span><span>React Native / Expo</span><span>Express.js (planned)</span><span>AI concepts</span></div><span class="project-status"><i class="fa-solid fa-circle"></i> Project in development</span></div></article>
+        <article class="project-card reveal"><div class="project-art tech-art"><div class="tech-symbol"><i class="fa-solid fa-terminal"></i><span>AT</span></div><span class="project-number">02</span></div><div class="project-info"><div class="project-label">WEB DESIGN · PERSONAL / BUSINESS BRAND</div><h3>Allan's Technology</h3><p>A technology services website concept presenting web development, graphics design, software development, networking, computer repair and ICT support.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP / MySQL</span></div><span class="project-status"><i class="fa-solid fa-circle"></i> Website project</span></div></article>
+      </div>
+      <div class="project-disclaimer"><i class="fa-solid fa-lightbulb"></i> Project descriptions reflect current concepts and learning work. Add live demos, screenshots and source-code links when they are ready to share.</div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="cta-panel reveal"><div><p class="section-kicker">HAVE AN IDEA OR OPPORTUNITY?</p><h2>Let's create something <span class="gradient-text">meaningful.</span></h2><p>I'm interested in connecting with people, learning from new challenges and exploring opportunities in technology.</p></div><a class="button button-primary" href="#contact">Start a conversation <i class="fa-solid fa-arrow-right"></i></a><div class="cta-decoration">A<span>.</span></div></div>
+    </section>
+
+    <section class="section section-contact" id="contact">
+      <div class="section-heading reveal"><p class="section-kicker">05 / GET IN TOUCH</p><h2>Let's talk about <span class="gradient-text">your idea.</span></h2><p class="section-intro">Have a project, question or opportunity? Send me a message.</p></div>
+      <div class="contact-grid">
+        <div class="contact-copy reveal"><h3>I'm happy to hear from you.</h3><p>Whether you want to discuss a project, collaborate, share an opportunity or simply connect, feel free to reach out.</p><a class="contact-method" href="mailto:YOUR_EMAIL@example.com"><span><i class="fa-regular fa-envelope"></i></span><div><small>EMAIL</small><b>YOUR_EMAIL@example.com</b></div></a><a class="contact-method" href="https://wa.me/YOUR_NUMBER" target="_blank" rel="noopener"><span><i class="fa-brands fa-whatsapp"></i></span><div><small>WHATSAPP</small><b>Message me on WhatsApp</b></div></a><div class="contact-method"><span><i class="fa-solid fa-location-dot"></i></span><div><small>LOCATION</small><b>Uganda</b></div></div></div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Enter your name" required></div>
+          <div class="form-row"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
+          <div class="form-row"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="What would you like to discuss?" required></div>
+          <div class="form-row"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea></div>
+          <button class="button button-primary submit-button" type="submit">Prepare email <i class="fa-solid fa-paper-plane"></i></button>
+          <p class="form-hint" id="formHint">This form opens your email application with your message prepared. It does not store messages on this website.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">A<span>.</span></span><span>ALLAN<span class="brand-muted">NDAYAMBAJE</span></span></a><p>Curious mind. Practical solutions. Continuous growth.</p><div class="footer-socials"><a href="https://github.com/YOUR_GITHUB_USERNAME" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://wa.me/YOUR_NUMBER" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></div><div class="footer-bottom"><span>© <span id="year"></span> Allan Ndayambaje. All rights reserved.</span><a href="#home">Back to top ↑</a></div></footer>
+  <script>
+document.body.classList.add('js-ready');
+// Navigation, scroll effects and contact form for Allan's portfolio.
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.getElementById('nav');
+const navLinks = document.querySelectorAll('.nav-link');
+
+menuToggle?.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.innerHTML = isOpen
+    ? '<i class="fa-solid fa-xmark"></i>'
+    : '<i class="fa-solid fa-bars"></i>';
+});
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    if (menuToggle) menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  });
+});
+
+const progress = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const percent = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+  if (progress) progress.style.width = `${percent}%`;
+}, { passive: true });
+
+const revealObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
+
+const sections = document.querySelectorAll('main section[id]');
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+      });
+    }
+  });
+}, { rootMargin: '-35% 0px -55% 0px' });
+sections.forEach(section => sectionObserver.observe(section));
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+document.getElementById('contactForm')?.addEventListener('submit', event => {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const data = new FormData(form);
+  // Replace this address with Allan's real email before publishing.
+  const recipient = 'YOUR_EMAIL@example.com';
+  if (recipient === 'YOUR_EMAIL@example.com') {
+    document.getElementById('formHint').textContent =
+      'Before publishing, replace YOUR_EMAIL@example.com in script.js with your real email address.';
+    return;
+  }
+  const subject = encodeURIComponent(data.get('subject'));
+  const body = encodeURIComponent(
+    `Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`
+  );
+  window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+});
+
+  </script>
+</body>
+</html>
