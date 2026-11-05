@@ -58,7 +58,7 @@ body.js-ready .reveal.visible{opacity:1;transform:translateY(0)}
 <body>
   <div class="scroll-progress" id="scrollProgress"></div>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Allan home"><span class="brand-mark"><img src="C:\Users\jacks\OneDrive\Old\Pictures\IMG-20251001-WA0004.jpg" width="50" height="50" alt=""><span>.</span></span><span>ALLAN<span class="brand-muted">NDAYAMBAJE</span></span></a>
+    <a class="brand" href="#home" aria-label="Allan home"><span class="brand-mark"><img src="Allan.jpg" width="50" height="50" alt=""><span>.</span></span><span>ALLAN<span class="brand-muted">NDAYAMBAJE</span></span></a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     <nav class="nav" id="nav">
       <a href="#home" class="nav-link active">Home</a>
@@ -119,7 +119,7 @@ body.js-ready .reveal.visible{opacity:1;transform:translateY(0)}
       <div class="section-heading reveal"><p class="section-kicker">01 / ABOUT ME</p><h2>A little about <span class="gradient-text">who I am.</span></h2><p class="section-intro">Technology is more than code to me — it is a way to solve problems, share ideas and create opportunities.</p></div>
       <div class="about-grid">
         <div class="about-card profile-card reveal">
-          <div class="profile-art"><div class="profile-initials"><img src="C:\Users\jacks\OneDrive\Old\Pictures\IMG-20251001-WA0004.jpg" width="130" height="130" alt=""></div><span class="profile-ring"></span><span class="profile-spark spark-a">✳</span><span class="profile-spark spark-b">+</span></div>
+          <div class="profile-art"><div class="profile-initials"><img src="Allan.jpg" width="130" height="130" alt=""></div><span class="profile-ring"></span><span class="profile-spark spark-a">✳</span><span class="profile-spark spark-b">+</span></div>
           <div class="profile-caption"><span class="status-dot"></span> Based in Uganda</div>
         </div>
         <div class="about-copy reveal">
@@ -174,13 +174,13 @@ body.js-ready .reveal.visible{opacity:1;transform:translateY(0)}
     <section class="section section-contact" id="contact">
       <div class="section-heading reveal"><p class="section-kicker">05 / GET IN TOUCH</p><h2>Let's talk about <span class="gradient-text">your idea.</span></h2><p class="section-intro">Have a project, question or opportunity? Send me a message.</p></div>
       <div class="contact-grid">
-        <div class="contact-copy reveal"><h3>I'm happy to hear from you.</h3><p>Whether you want to discuss a project, collaborate, share an opportunity or simply connect, feel free to reach out.</p><a class="contact-method" href="mailto:YOUR_EMAIL@example.com"><span><i class="fa-regular fa-envelope"></i></span><div><small>EMAIL</small><b>YOUR_EMAIL@example.com</b></div></a><a class="contact-method" href="https://wa.me/YOUR_NUMBER" target="_blank" rel="noopener"><span><i class="fa-brands fa-whatsapp"></i></span><div><small>WHATSAPP</small><b>Message me on WhatsApp</b></div></a><div class="contact-method"><span><i class="fa-solid fa-location-dot"></i></span><div><small>LOCATION</small><b>Uganda</b></div></div></div>
+        <div class="contact-copy reveal"><h3>I'm happy to hear from you.</h3><p>Whether you want to discuss a project, collaborate, share an opportunity or simply connect, feel free to reach out.</p><a class="contact-method" href="mailto:ndayambajeallan78@gmail.com"><span><i class="fa-regular fa-envelope"></i></span><div><small>EMAIL</small><b>ndayambajeallan78@gmail.com</b></div></a><a class="contact-method" href="https://wa.me/256789443852" target="_blank" rel="noopener"><span><i class="fa-brands fa-whatsapp"></i></span><div><small>WHATSAPP</small><b>0789443852</b></div></a><div class="contact-method"><span><i class="fa-solid fa-location-dot"></i></span><div><small>LOCATION</small><b>kisoro,Uganda</b></div></div></div>
         <form class="contact-form reveal" id="contactForm">
           <div class="form-row"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Enter your name" required></div>
           <div class="form-row"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
           <div class="form-row"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="What would you like to discuss?" required></div>
           <div class="form-row"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea></div>
-          <button class="button button-primary submit-button" type="submit">Prepare email <i class="fa-solid fa-paper-plane"></i></button>
+          <button class="button button-primary submit-button" type="submit"> <a href="mailto:ndayambajeallan78@gmail.com">Prepare email</a> <i class="fa-solid fa-paper-plane"></i></button>
           <p class="form-hint" id="formHint">This form opens your email application with your message prepared. It does not store messages on this website.</p>
         </form>
       </div>
@@ -242,24 +242,43 @@ sections.forEach(section => sectionObserver.observe(section));
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+
 document.getElementById('contactForm')?.addEventListener('submit', event => {
   event.preventDefault();
+
   const form = event.currentTarget;
   const data = new FormData(form);
-  // Replace this address with Allan's real email before publishing.
-  const recipient = 'YOUR_EMAIL@example.com';
-  if (recipient === 'YOUR_EMAIL@example.com') {
-    document.getElementById('formHint').textContent =
-      'Before publishing, replace YOUR_EMAIL@example.com in script.js with your real email address.';
-    return;
-  }
+
+  // Allan's official email address
+  const recipient = 'ndayambajeallan78@gmail.com';
+
   const subject = encodeURIComponent(data.get('subject'));
+
   const body = encodeURIComponent(
-    `Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`
+    `Hello Allan,
+
+You have received a new message from your portfolio website.
+
+Name: ${data.get('name')}
+
+Sender's Email: ${data.get('email')}
+
+Subject: ${data.get('subject')}
+
+Message:
+${data.get('message')}
+
+Regards,
+${data.get('name')}`
   );
-  window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+  // Open the visitor's email application
+  window.location.href =
+    `mailto:${recipient}?subject=${subject}&body=${body}`;
 });
+
 
   </script>
 </body>
 </html>
+
