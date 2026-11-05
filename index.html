@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
 /* Allan Ndayambaje portfolio — responsive, accessible styling */
-:root{--bg:#081426;--bg2:#0b1b31;--panel:#10233c;--panel2:#122943;--text:#edf5ff;--muted:#a7b7cb;--blue:#54a9ff;--cyan:#50e3d2;--line:rgba(171,201,232,.14);--font:'DM Sans',sans-serif;--display:'Space Grotesk',sans-serif}
+:root{--bg:#081f26;--bg2:#0b1b31;--panel:#10233c;--panel2:#122943;--text:#edf5ff;--muted:#a7b7cb;--blue:#54a9ff;--cyan:#50e3d2;--line:rgba(171,201,232,.14);--font:'DM Sans',sans-serif;--display:'Space Grotesk',sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));z-index:2000}
 .site-header{height:82px;padding:0 8%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1000;background:rgba(8,20,38,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;font:700 14px var(--display);letter-spacing:1.2px}.brand-mark{width:39px;height:39px;border-radius:12px;background:linear-gradient(135deg,#236fbd,#42d6ce);display:grid;place-items:center;font:700 22px var(--display);color:#061426}.brand-mark span,.cta-decoration span{color:#fff}.brand-muted{display:block;font:500 9px var(--font);letter-spacing:3px;color:var(--muted);margin-top:1px}.nav{display:flex;align-items:center;gap:30px}.nav-link{font-size:13px;font-weight:600;color:var(--muted);transition:.25s}.nav-link:hover,.nav-link.active{color:var(--text)}.nav-contact{padding:10px 16px;border:1px solid rgba(84,169,255,.45);border-radius:8px;color:var(--text)}.nav-contact i{font-size:10px;margin-left:5px;color:var(--cyan)}.menu-toggle{display:none;background:none;border:0;color:white;font-size:23px}
 .section-shell{padding-left:10%;padding-right:10%}.hero{min-height:calc(100vh - 82px);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px;position:relative;padding-top:70px;padding-bottom:110px;background:radial-gradient(ellipse at 78% 46%,rgba(31,100,164,.15),transparent 40%)}.eyebrow,.section-kicker{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--cyan)}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid var(--line);border-radius:30px;background:rgba(16,35,60,.6)}.status-dot{height:7px;width:7px;background:#50dfaa;border-radius:50%;box-shadow:0 0 12px #50dfaa;display:inline-block}.hello{color:var(--muted);font-size:19px;margin-top:30px}.hero h1{font:700 clamp(48px,6vw,78px)/1.08 var(--display);letter-spacing:-3px;margin:7px 0 15px}.gradient-text{background:linear-gradient(100deg,#69b8ff,#55e2d0);-webkit-background-clip:text;background-clip:text;color:transparent}.hero h2{font:500 clamp(17px,2vw,22px) var(--display);color:#dce9f8}.divider-word{color:var(--cyan);padding:0 5px}.hero-description{max-width:570px;color:var(--muted);font-size:16px;margin:22px 0 29px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:13px 19px;border-radius:8px;font-size:13px;font-weight:700;transition:transform .25s,box-shadow .25s,border-color .25s;cursor:pointer}.button:hover{transform:translateY(-3px)}.button-primary{background:linear-gradient(110deg,#328ee7,#36c8c1);color:#061426;box-shadow:0 9px 30px rgba(46,157,215,.2);border:0}.button-primary:hover{box-shadow:0 12px 35px rgba(46,157,215,.35)}.button-ghost{border:1px solid var(--line);color:var(--text)}.button-ghost:hover{border-color:var(--blue)}.hero-socials{display:flex;align-items:center;gap:19px;margin-top:38px}.hero-socials span{font-size:10px;letter-spacing:1.8px;color:#8296ae;font-weight:700}.hero-socials a,.footer-socials a{color:#9eb3ca;font-size:17px;transition:.2s}.hero-socials a:hover,.footer-socials a:hover{color:var(--cyan);transform:translateY(-2px)}
@@ -21,7 +21,7 @@
 .timeline{max-width:850px;margin-left:10px;border-left:1px solid rgba(84,169,255,.3);padding-left:35px}.timeline-item{position:relative;padding-bottom:37px}.timeline-marker{position:absolute;left:-42px;top:5px;width:13px;height:13px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 6px rgba(80,227,210,.1)}.timeline-content{padding:23px 26px;border:1px solid var(--line);border-radius:12px;background:#0d1e33}.timeline-meta{display:flex;justify-content:space-between;gap:15px;color:var(--cyan);font-size:9px;letter-spacing:1.2px;font-weight:700;margin-bottom:12px}.timeline-meta span+span{color:#849bb3;text-align:right}.timeline-content h3{font-size:19px}.timeline-content p{font-size:13px;max-width:720px}
 .section-projects{background:#0a192c}.projects-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}.project-card{background:#10233b;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.25s}.project-art{height:220px;display:grid;place-items:center;position:relative;overflow:hidden}.rental-art{background:radial-gradient(circle at 50% 50%,#1d5980,#10233b 70%)}.tech-art{background:radial-gradient(circle at 50% 50%,#254b66,#10233b 70%)}.project-number{position:absolute;right:18px;top:14px;font:600 12px var(--display);color:#b5cce0}.mini-dashboard{width:66%;height:145px;border-radius:8px;background:#eaf3fa;box-shadow:0 15px 40px #07111d66;overflow:hidden;transform:rotate(-3deg)}.mini-top{height:19px;background:#d6e3ed;display:flex;gap:4px;align-items:center;padding-left:9px}.mini-top span{width:5px;height:5px;border-radius:50%;background:#6ca7c8}.mini-body{display:flex;height:126px}.mini-sidebar{width:22%;background:#183c5a}.mini-main{flex:1;padding:12px}.mini-heading{height:8px;width:50%;background:#8baec6;border-radius:5px}.mini-stats{display:flex;gap:7px;margin:12px 0}.mini-stats i{height:23px;flex:1;background:#c3d8e6;border-radius:3px}.mini-chart{height:42px;background:linear-gradient(160deg,transparent 40%,#5fc8bd 41%,#5fc8bd 44%,transparent 45%),#d9e8ef;border-radius:3px}.tech-symbol{height:125px;width:125px;border:1px solid rgba(92,205,215,.5);border-radius:30px;display:grid;place-items:center;color:var(--cyan);font:700 35px var(--display);transform:rotate(-8deg);background:rgba(7,22,39,.3)}.tech-symbol i{font-size:30px;margin-bottom:-25px}.project-info{padding:24px}.project-label{font-size:9px;color:var(--cyan);letter-spacing:1.1px;font-weight:700;margin-bottom:9px}.project-info h3{font-size:22px}.project-info p{font-size:12px}.project-status{display:inline-flex;align-items:center;gap:7px;color:#9cb4ca;font-size:10px;margin-top:18px}.project-status i{font-size:7px;color:#e8bd6a}.project-disclaimer{font-size:11px;color:#91a7bd;margin-top:22px}.project-disclaimer i{color:var(--cyan);margin-right:6px}
 .section-cta{padding-top:75px;padding-bottom:75px}.cta-panel{position:relative;overflow:hidden;border:1px solid rgba(85,187,221,.24);border-radius:17px;padding:43px 48px;background:linear-gradient(110deg,#12375a,#10334a 65%,#12404b);display:flex;align-items:center;justify-content:space-between;gap:30px}.cta-panel>div:first-child{max-width:610px;z-index:1}.cta-panel h2{font-size:34px}.cta-panel p:not(.section-kicker){color:#b2c8d9;font-size:13px;margin-top:13px}.cta-panel .button{white-space:nowrap;z-index:1}.cta-decoration{position:absolute;right:25%;font:700 180px var(--display);color:rgba(119,202,223,.06)}
-.section-contact{background:#0a192c}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px}.contact-copy>p{margin-bottom:28px}.contact-method{display:flex;align-items:center;gap:14px;margin:19px 0}.contact-method>span{height:43px;width:43px;border-radius:10px;background:#163451;color:var(--cyan);display:grid;place-items:center;font-size:17px}.contact-method small,.contact-method b{display:block}.contact-method small{font-size:9px;color:#7f98b1;letter-spacing:1.3px}.contact-method b{font-size:12px;font-weight:600}.contact-form{padding:28px;border:1px solid var(--line);border-radius:13px;background:#10233b}.form-row{margin-bottom:16px}.form-row label{display:block;font-size:11px;color:#c4d5e6;font-weight:600;margin-bottom:7px}.form-row input,.form-row textarea{width:100%;padding:12px 13px;border:1px solid rgba(157,189,219,.17);border-radius:7px;background:#0a1a2e;color:var(--text);outline:none;font-size:12px;resize:vertical}.form-row input:focus,.form-row textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(84,169,255,.08)}.form-row input::placeholder,.form-row textarea::placeholder{color:#657f99}.submit-button{width:100%}.form-hint{font-size:10px;color:#8299b0;margin-top:12px}.footer{padding:38px 10% 20px;background:#06101e;border-top:1px solid var(--line);text-align:center}.footer>.brand{justify-content:center}.footer>p{font-size:11px;color:#8499af;margin:15px 0}.footer-socials{display:flex;justify-content:center;gap:19px;margin-bottom:25px}.footer-bottom{border-top:1px solid var(--line);padding-top:17px;display:flex;justify-content:space-between;color:#71869d;font-size:10px}.footer-bottom a{color:#9bb4cc}.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.section-contact{background:#0a192c}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px}.contact-copy>p{margin-bottom:28px}.contact-method{display:flex;align-items:center;gap:14px;margin:19px 0}.contact-method>span{height:43px;width:43px;border-radius:10px;background:#163451;color:var(--cyan);display:grid;place-items:center;font-size:17px}.contact-method small,.contact-method b{display:block}.contact-method small{font-size:9px;color:#7f98b1;letter-spacing:1.3px}.contact-method b{font-size:12px;font-weight:600}.contact-form{padding:28px;border:1px solid var(--line);border-radius:13px;background:#10233b}.contact-links-panel .contact-method{margin:18px 0}.form-row{margin-bottom:16px}.form-row label{display:block;font-size:11px;color:#c4d5e6;font-weight:600;margin-bottom:7px}.form-row input,.form-row textarea{width:100%;padding:12px 13px;border:1px solid rgba(157,189,219,.17);border-radius:7px;background:#0a1a2e;color:var(--text);outline:none;font-size:12px;resize:vertical}.form-row input:focus,.form-row textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(84,169,255,.08)}.form-row input::placeholder,.form-row textarea::placeholder{color:#657f99}.submit-button{width:100%}.form-hint{font-size:10px;color:#8299b0;margin-top:12px}.footer{padding:38px 10% 20px;background:#06101e;border-top:1px solid var(--line);text-align:center}.footer>.brand{justify-content:center}.footer>p{font-size:11px;color:#8499af;margin:15px 0}.footer-socials{display:flex;justify-content:center;gap:19px;margin-bottom:25px}.footer-bottom{border-top:1px solid var(--line);padding-top:17px;display:flex;justify-content:space-between;color:#71869d;font-size:10px}.footer-bottom a{color:#9bb4cc}.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:1000px){.site-header{padding:0 5%}.section-shell,.section{padding-left:7%;padding-right:7%}.hero{gap:25px}.hero h1{font-size:59px}.nav{gap:18px}.about-grid,.contact-grid{gap:35px}.skills-grid{grid-template-columns:repeat(2,1fr)}.scroll-cue{left:7%}}
 @media(max-width:760px){.site-header{height:72px}.menu-toggle{display:block}.nav{display:none;position:absolute;top:71px;left:0;right:0;padding:18px 7% 24px;background:#0b1b30;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav-link{padding:12px 0;border-bottom:1px solid var(--line)}.nav-contact{margin-top:12px;text-align:center;border:1px solid rgba(84,169,255,.45)}.hero{grid-template-columns:1fr;padding-top:65px;padding-bottom:105px}.hero-copy{max-width:650px}.hero-visual{min-height:350px;margin-top:15px}.code-window{max-width:410px}.chip-one{right:0}.chip-two{left:0}.hero h1{font-size:clamp(48px,11vw,68px)}.about-grid,.contact-grid{grid-template-columns:1fr}.about-card{min-height:330px}.profile-art{transform:scale(.85)}.about-copy{padding-top:8px}.projects-grid{grid-template-columns:1fr}.project-art{height:205px}.cta-panel{align-items:flex-start;flex-direction:column;padding:32px}.section{padding-top:78px;padding-bottom:78px}.scroll-cue{bottom:26px}}
 @media(max-width:520px){.section-shell,.section{padding-left:6%;padding-right:6%}.hero h1{letter-spacing:-2px}.hero-description{font-size:14px}.hero-visual{min-height:300px}.code-content{padding:19px 17px;font-size:10px}.code-window{width:94%}.hero-orbit{width:300px;height:300px}.orbit-two{width:350px;height:350px}.floating-chip{font-size:9px;padding:8px 10px}.chip-one{top:25px}.chip-two{bottom:20px}.skills-grid{grid-template-columns:1fr}.section-heading h2{font-size:33px}.about-facts{grid-template-columns:1fr}.timeline{padding-left:25px}.timeline-marker{left:-32px}.timeline-content{padding:19px}.timeline-meta{flex-direction:column;gap:4px}.timeline-meta span+span{text-align:left}.cta-panel h2{font-size:29px}.contact-form{padding:20px}.footer-bottom{gap:12px;flex-direction:column;align-items:center}.hero-socials{gap:15px}.hero-socials span{font-size:9px}}
@@ -51,6 +51,92 @@ body{background:#071426}
 body.js-ready .reveal{opacity:0;transform:translateY(22px)}
 body.js-ready .reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:760px){.hero{background:radial-gradient(ellipse at 50% 35%,rgba(30,144,220,.28),transparent 52%),linear-gradient(145deg,#08172d,#102b4b 65%,#09243a)}}
+
+  
+/* LIGHT THEME OVERRIDES */
+:root{
+  --bg:#f4f8fc;
+  --bg2:#eaf3fb;
+  --panel:#ffffff;
+  --panel2:#edf5fc;
+  --text:#183047;
+  --muted:#5d7185;
+  --blue:#2478d4;
+  --cyan:#0b9f9a;
+  --line:rgba(35,83,125,.16);
+}
+body{background:#f4f8fc;color:#183047}
+.site-header{background:rgba(255,255,255,.94);border-bottom:1px solid #dce8f2;box-shadow:0 5px 22px rgba(35,73,109,.07)}
+.brand{color:#183047}
+.brand-muted{color:#71869a}
+.nav-link{color:#5d7185}
+.nav-link:hover,.nav-link.active{color:#1769b2}
+.nav-contact{color:#1769b2;border-color:rgba(36,120,212,.35)}
+.menu-toggle{color:#183047}
+.hero{
+  background:
+    radial-gradient(ellipse at 80% 45%,rgba(73,171,226,.20),transparent 42%),
+    radial-gradient(ellipse at 10% 85%,rgba(47,190,169,.13),transparent 38%),
+    linear-gradient(135deg,#f7fbff 0%,#eaf5ff 55%,#f1fbfa 100%);
+}
+.eyebrow{background:rgba(255,255,255,.75);border-color:#d5e5f1;color:#2478a8}
+.hello,.hero-description,.section-intro,.about-copy p,.skill-card p,
+.timeline-content p,.project-info p,.contact-copy>p{color:#5d7185}
+.hero h2{color:#36536d}
+.gradient-text{background:linear-gradient(100deg,#2478d4,#0b9f9a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-socials span{color:#6d8296}
+.hero-socials a,.footer-socials a{color:#47718f}
+.button-primary{background:linear-gradient(110deg,#3189df,#20b7a9);color:#fff;box-shadow:0 9px 25px rgba(39,137,190,.18)}
+.button-primary:hover{box-shadow:0 12px 30px rgba(39,137,190,.25)}
+.button-ghost{border-color:#b9d0e3;color:#24516f}
+.button-ghost:hover,.nav-contact:hover{background:#e6f2fb}
+.code-window{background:#fff;border-color:#c9dceb;box-shadow:0 25px 65px rgba(44,85,120,.16)}
+.window-top{background:#e8f1f8;border-bottom-color:#d4e3ee;color:#58738b}
+.code-content{color:#29465f}
+.code-purple{color:#8856b8}.code-blue{color:#2478d4}.code-cyan{color:#087f83}.code-green{color:#27834d}.code-comment{color:#7890a5}
+.floating-chip{background:#fff;border-color:#d5e5f1;color:#294d68;box-shadow:0 10px 25px rgba(44,85,120,.12)}
+.hero-orbit{border-color:rgba(48,133,185,.17)}
+.scroll-cue{color:#668096}
+.scroll-cue span{background:#0b9f9a}
+.section-about,.section-projects,.section-contact{background:linear-gradient(135deg,#edf5fc,#f8fbfe)}
+.section-skills{background:linear-gradient(135deg,#f8fbfe,#eaf4fb)}
+.section{background-color:#f4f8fc}
+.about-card{background:radial-gradient(circle at 50% 35%,rgba(49,171,190,.14),transparent 48%),linear-gradient(145deg,#e5f3fb,#f8fcff);border-color:#d5e5f1}
+.profile-initials{background:linear-gradient(145deg,#69b4ed,#65d2c5);color:#12344c;box-shadow:0 0 55px rgba(66,170,195,.16)}
+.profile-ring{border-color:rgba(36,120,212,.35)}
+.profile-caption{color:#52718a}
+.fact-icon,.skill-icon,.contact-method>span{background:#e1f0fa;color:#167e9b}
+.about-facts small{color:#627b91}
+.text-link{color:#087f83}
+.skill-card,.timeline-content,.project-card,.contact-form{
+  background:#fff;
+  border:1px solid #dce8f2;
+  box-shadow:0 10px 28px rgba(35,73,109,.07);
+}
+.skill-card:hover,.project-card:hover{border-color:rgba(11,159,154,.45);box-shadow:0 15px 32px rgba(35,73,109,.11)}
+.tags span{color:#28617f;background:#edf6fb;border-color:#dcebf5}
+.skills-note,.project-disclaimer{color:#657d92}
+.timeline{border-left-color:rgba(36,120,212,.35)}
+.timeline-marker{background:#0b9f9a;box-shadow:0 0 0 6px rgba(11,159,154,.12)}
+.timeline-meta{color:#087f83}
+.timeline-meta span+span{color:#71869a}
+.project-art{background-color:#e3f1fa}
+.rental-art{background:radial-gradient(circle at 50% 50%,#c9e9f5,#eaf4fb 70%)}
+.tech-art{background:radial-gradient(circle at 50% 50%,#d4eee9,#eaf4fb 70%)}
+.mini-dashboard{box-shadow:0 15px 35px rgba(44,85,120,.15)}
+.tech-symbol{color:#087f83;border-color:rgba(11,159,154,.4);background:rgba(255,255,255,.45)}
+.project-status{color:#637c91}
+.project-status i{color:#d49a32}
+.cta-panel{background:radial-gradient(circle at 90% 20%,rgba(255,255,255,.25),transparent 35%),linear-gradient(110deg,#287cc2,#168f9a 70%,#20a89d);box-shadow:0 15px 38px rgba(35,110,150,.16)}
+.cta-panel p:not(.section-kicker){color:#eaf8fb}
+.section-contact{background:linear-gradient(135deg,#edf5fc,#f8fbfe)}
+.contact-method small{color:#6d8296}
+.contact-method b{color:#29465f}
+.footer{background:#e7f0f7;border-top:1px solid #d5e3ee}
+.footer-bottom{border-top-color:#d1e0eb;color:#6d8296}
+.footer-bottom a{color:#2478a8}
+@media(max-width:760px){.nav{background:#fff;border-bottom-color:#dce8f2}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
 
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -84,9 +170,9 @@ body.js-ready .reveal.visible{opacity:1;transform:translateY(0)}
         </div>
         <div class="hero-socials">
           <span>CONNECT</span>
-          <a href="https://github.com/ndayambajeallan78 (ndayambajeallan78)" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://github.com/ndayambajeallan78" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
           <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://wa.me/0789443852" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://wa.me/256789443852" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="hero-visual reveal">
@@ -116,7 +202,7 @@ body.js-ready .reveal.visible{opacity:1;transform:translateY(0)}
     </section>
 
     <section class="section section-about" id="about">
-      <div class="section-heading reveal"><p class="section-kicker">01 / ABOUT ME</p><h2>A little about <span class="gradient-text">who I am.</span></h2><p class="section-intro">Technology is more than code to me — it is a way to solve problems, share ideas and create opportunities.</p></div>
+      <div class="section-heading reveal"><p class="section-kicker">01 / ABOUT ME</p><h2>A little about <span class="gradient-text">who I am.</span></h2><p class="section-intro">Technology is more than code to me . It is a way to solve problems, share ideas and create opportunities.</p></div>
       <div class="about-grid">
         <div class="about-card profile-card reveal">
           <div class="profile-art"><div class="profile-initials"><img src="Allan.jpg" width="130" height="130" alt=""></div><span class="profile-ring"></span><span class="profile-spark spark-a">✳</span><span class="profile-spark spark-b">+</span></div>
@@ -168,26 +254,46 @@ body.js-ready .reveal.visible{opacity:1;transform:translateY(0)}
     </section>
 
     <section class="section section-cta">
-      <div class="cta-panel reveal"><div><p class="section-kicker">HAVE AN IDEA OR OPPORTUNITY?</p><h2>Let's create something <span class="gradient-text">meaningful.</span></h2><p>I'm interested in connecting with people, learning from new challenges and exploring opportunities in technology.</p></div><a class="button button-primary" href="#contact">Start a conversation <i class="fa-solid fa-arrow-right"></i></a><div class="cta-decoration">A<span>.</span></div></div>
+      <div class="cta-panel reveal"><div><p class="section-kicker">HAVE AN IDEA OR OPPORTUNITY?</p><h2>Let's create something <span style="color: #0ed7af;">meaningful.</span></h2><p>I'm interested in connecting with people, learning from new challenges and exploring opportunities in technology.</p></div><a class="button button-primary" href="#contact">Start a conversation <i class="fa-solid fa-arrow-right"></i></a><div class="cta-decoration"></div></div>
     </section>
 
     <section class="section section-contact" id="contact">
       <div class="section-heading reveal"><p class="section-kicker">05 / GET IN TOUCH</p><h2>Let's talk about <span class="gradient-text">your idea.</span></h2><p class="section-intro">Have a project, question or opportunity? Send me a message.</p></div>
       <div class="contact-grid">
         <div class="contact-copy reveal"><h3>I'm happy to hear from you.</h3><p>Whether you want to discuss a project, collaborate, share an opportunity or simply connect, feel free to reach out.</p><a class="contact-method" href="mailto:ndayambajeallan78@gmail.com"><span><i class="fa-regular fa-envelope"></i></span><div><small>EMAIL</small><b>ndayambajeallan78@gmail.com</b></div></a><a class="contact-method" href="https://wa.me/256789443852" target="_blank" rel="noopener"><span><i class="fa-brands fa-whatsapp"></i></span><div><small>WHATSAPP</small><b>0789443852</b></div></a><div class="contact-method"><span><i class="fa-solid fa-location-dot"></i></span><div><small>LOCATION</small><b>kisoro,Uganda</b></div></div></div>
-        <form class="contact-form reveal" id="contactForm">
-          <div class="form-row"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Enter your name" required></div>
-          <div class="form-row"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
-          <div class="form-row"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="What would you like to discuss?" required></div>
-          <div class="form-row"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea></div>
-          <button class="button button-primary submit-button" type="submit"> <a href="mailto:ndayambajeallan78@gmail.com">Prepare email</a> <i class="fa-solid fa-paper-plane"></i></button>
-          <p class="form-hint" id="formHint">This form opens your email application with your message prepared. It does not store messages on this website.</p>
-        </form>
+        
+        <div class="contact-form reveal contact-links-panel">
+          <h3>Connect with me directly</h3>
+          <p class="section-intro" style="margin:8px 0 22px">
+            Choose the channel that works best for you. I would be happy to hear from you.
+          </p>
+          <a class="contact-method" href="mailto:ndayambajeallan78@gmail.com">
+            <span><i class="fa-regular fa-envelope"></i></span>
+            <div><small>EMAIL</small><b>ndayambajeallan78@gmail.com</b></div>
+          </a>
+          <a class="contact-method" href="https://wa.me/256789443852" target="_blank" rel="noopener">
+            <span><i class="fa-brands fa-whatsapp"></i></span>
+            <div><small>WHATSAPP</small><b>Chat with me on WhatsApp</b></div>
+          </a>
+          <a class="contact-method" href="tel:+256789443852">
+            <span><i class="fa-solid fa-phone"></i></span>
+            <div><small>PHONE</small><b>+256 789 443 852</b></div>
+          </a>
+          <a class="contact-method" href="https://github.com/ndayambajeallan78" target="_blank" rel="noopener">
+            <span><i class="fa-brands fa-github"></i></span>
+            <div><small>GITHUB</small><b>View my GitHub profile</b></div>
+          </a>
+          <a class="contact-method" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+            <span><i class="fa-brands fa-linkedin-in"></i></span>
+            <div><small>LINKEDIN</small><b>Visit LinkedIn</b></div>
+          </a>
+        </div>
+
       </div>
     </section>
   </main>
 
-  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">A<span>.</span></span><span>ALLAN<span class="brand-muted">NDAYAMBAJE</span></span></a><p>Curious mind. Practical solutions. Continuous growth.</p><div class="footer-socials"><a href="https://github.com/YOUR_GITHUB_USERNAME" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://wa.me/YOUR_NUMBER" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></div><div class="footer-bottom"><span>© <span id="year"></span> Allan Ndayambaje. All rights reserved.</span><a href="#home">Back to top ↑</a></div></footer>
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">A<span>.</span></span><span>ALLAN<span class="brand-muted">NDAYAMBAJE</span></span></a><p>Curious mind. Practical solutions. Continuous growth.</p><div class="footer-socials"><a href="https://github.com/ndayambajeallan78" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://wa.me/256789443852" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></div><div class="footer-bottom"><span>© <span id="year"></span> Allan Ndayambaje. All rights reserved.</span><a href="#home">Back to top ↑</a></div></footer>
   <script>
 document.body.classList.add('js-ready');
 // Navigation, scroll effects and contact form for Allan's portfolio.
@@ -241,41 +347,6 @@ const sectionObserver = new IntersectionObserver(entries => {
 sections.forEach(section => sectionObserver.observe(section));
 
 document.getElementById('year').textContent = new Date().getFullYear();
-
-
-document.getElementById('contactForm')?.addEventListener('submit', event => {
-  event.preventDefault();
-
-  const form = event.currentTarget;
-  const data = new FormData(form);
-
-  // Allan's official email address
-  const recipient = 'ndayambajeallan78@gmail.com';
-
-  const subject = encodeURIComponent(data.get('subject'));
-
-  const body = encodeURIComponent(
-    `Hello Allan,
-
-You have received a new message from your portfolio website.
-
-Name: ${data.get('name')}
-
-Sender's Email: ${data.get('email')}
-
-Subject: ${data.get('subject')}
-
-Message:
-${data.get('message')}
-
-Regards,
-${data.get('name')}`
-  );
-
-  // Open the visitor's email application
-  window.location.href =
-    `mailto:${recipient}?subject=${subject}&body=${body}`;
-});
 
 
   </script>
